@@ -1,4 +1,113 @@
-body {
-    background-color: green;
+* {
+    /* outline: solid rgb(255, 255, 255); */
 }
+
+body { 
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 3fr 15fr 1fr;
+}
+
+
+/* styling for the top section */
+.title {
+    color: white;
+    font-family: 'Agbalumo';
+}
+
+.top { 
+    background-color: rgb(35, 35, 35);
+    font-size: 50px;
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+}
+
+#logo {
+    height: 100px; 
+    width: 100px;
+    background-size: cover;
+}
+
+
+
+/* styling for the middle section */
+
+.middle{ 
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* styling for the left middle section */
+
+.left {
+    background-color:rgb(200, 200, 200) ;
+}
+
+#icon {
+    height: 40px;
+    width: 40px;
+    margin: 0px 10px 0px 0px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0px 5px 0px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.nav-item:hover {
+    background-color: rgb(175, 175, 175);
+}
+
+.nav{
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    padding: 20px;
+
+
+}
+
+.projects-nav {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0px 10px 0px;
+}
+
+/* styling for the right middle section */
+
+
+
+
+
+
+/* styling for the bottom section */
+
+.bottom {
+    display: flex;
+    background-color: rgb(35, 35, 35);
+    justify-content: center;
+    align-items: center;
+}
+
+.sig {
+    color: white;
+    margin-right: 5px;
+    font-family: 'Agbalumo';
+}
+
+#git {
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
+
 

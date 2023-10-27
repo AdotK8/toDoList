@@ -1,2 +1,3 @@
 # toDoList
-Javascript To Do List with simple UI 
+Javascript To Do List with simple UI
+ 
