@@ -16,7 +16,7 @@
   \*********************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body {\n    background-color: green;\n}\n\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todolist/./src/styles/styles.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `* {\n    /* outline: solid rgb(255, 255, 255); */\n}\n\nbody { \n    margin: 0;\n    height: 100vh;\n    width: 100vw;\n    display: grid;\n    grid-template-rows: 3fr 15fr 1fr;\n}\n\n\n/* styling for the top section */\n.title {\n    color: white;\n    font-family: 'Agbalumo';\n}\n\n.top { \n    background-color: rgb(35, 35, 35);\n    font-size: 50px;\n    display: flex;\n    align-items: end;\n    padding: 1rem;\n}\n\n#logo {\n    height: 100px; \n    width: 100px;\n    background-size: cover;\n}\n\n\n\n/* styling for the middle section */\n\n.middle{ \n    display: grid;\n    grid-template-columns: 1fr 4fr;\n}\n\n/* styling for the left middle section */\n\n.left {\n    background-color:rgb(200, 200, 200) ;\n}\n\n#icon {\n    height: 40px;\n    width: 40px;\n    margin: 0px 10px 0px 0px;\n}\n\n.nav-item {\n    display: flex;\n    align-items: center;\n    margin: 5px 0px 5px 0px;\n    border-radius: 10px;\n    padding: 5px;\n}\n\n.nav-item:hover {\n    background-color: rgb(175, 175, 175);\n}\n\n.nav{\n    font-size: 20px;\n    font-family: 'Roboto';\n    font-weight: 400;\n    padding: 20px;\n\n\n}\n\n.projects-nav {\n    font-size: 30px;\n    font-weight: 500;\n    margin: 10px 0px 10px 0px;\n}\n\n/* styling for the right middle section */\n\n\n\n\n\n\n/* styling for the bottom section */\n\n.bottom {\n    display: flex;\n    background-color: rgb(35, 35, 35);\n    justify-content: center;\n    align-items: center;\n}\n\n.sig {\n    color: white;\n    margin-right: 5px;\n    font-family: 'Agbalumo';\n}\n\n#git {\n    height: 30px;\n    width: 30px;\n}\n\n\n\n\n\n\n`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todolist/./src/styles/styles.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -110,23 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/constructor.js":
+/*!****************************!*\
+  !*** ./src/constructor.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n//class constructor to create tasks\nclass task {   \n    constructor(description, dueDate, priority, project) {\n        this.description=description, \n        this.dueDate=dueDate, \n        this.priority=priority,\n        this.project=project\n    }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (task);\n\n//# sourceURL=webpack://todolist/./src/constructor.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test */ \"./src/test.js\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/styles.css */ \"./src/styles/styles.css\");\n\n\n\n(0,_test__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\n\n//# sourceURL=webpack://todolist/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/test.js":
-/*!*********************!*\
-  !*** ./src/test.js ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction tester () {\n    console.log(\"this is a test\")\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tester);\n\n//# sourceURL=webpack://todolist/./src/test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _constructor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constructor */ \"./src/constructor.js\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/styles.css */ \"./src/styles/styles.css\");\n\n\n\n//initializing empty arrays to store tasks and projects\nconst myTasks = [];\n\nconst task1 = new _constructor__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"bla bla\", \"2012\", \"high\", \"No Project\");\nconst task2 = new _constructor__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"fix something\", \"2010\", \"low\", \"No Project\");\nconst task3 = new _constructor__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"fuck you\", \"2022\", \"medium\", \"Yase\")\n\n\nmyTasks.push(task1, task2, task3)\nconsole.log(myTasks[2].project)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://todolist/./src/index.js?");
 
 /***/ })
 
