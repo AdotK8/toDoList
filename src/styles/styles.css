@@ -1,5 +1,5 @@
 * {
-    /* outline: solid rgb(255, 255, 255); */
+    /* outline: solid rgb(185, 42, 42); */
 }
 
 body { 
@@ -81,6 +81,24 @@ body {
 
 /* styling for the right middle section */
 
+.right { 
+    padding: 20px;
+}
+
+.taskCard {  
+    
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 50px 10fr 1fr 1fr;
+}
+
+.emptyCheck {
+
+    height: 50px;
+    width: 50px;
+
+}
+
 
 
 
@@ -98,7 +116,7 @@ body {
 .sig {
     color: white;
     margin-right: 5px;
-    font-family: 'Agbalumo';
+    font-family: 'Roboto';
 }
 
 #git {
