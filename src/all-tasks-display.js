@@ -3,6 +3,10 @@
 function allTasksDisplay(myTasks) {
 
    const container = document.querySelector('.container')
+
+   while(container.firstChild){
+    container.removeChild(container.lastChild)
+   }
    
     for (let i=0; i < myTasks.length; i++ ) {
         const newDiv = document.createElement('div')

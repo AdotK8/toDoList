@@ -27,8 +27,6 @@ function addTask () {
     removeContent();
 }
 
-
-
 function removeContent (){
     const container = document.querySelector('#create-task');
 
@@ -46,7 +44,6 @@ function myCallBack () {
     addInputForm();
 
 }
-
 
 function addInputForm() {
     const container = document.querySelector('#create-task');
@@ -112,8 +109,7 @@ function submitTask(){
     console.log(myTasks)
 
     allTasksDisplay(myTasks)
+    addTask()
 }
-
-
 
 export default addTask
