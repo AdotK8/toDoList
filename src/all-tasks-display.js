@@ -1,3 +1,5 @@
+//function which displays all the tasks in array 
+
 function allTasksDisplay(myTasks) {
 
    const container = document.querySelector('.container')
@@ -16,17 +18,35 @@ function allTasksDisplay(myTasks) {
         taskDescription.innerHTML = myTasks[i].description;
         newDiv.appendChild(taskDescription)
 
-        const taskDate = document.createElement('div');
-        taskDate.classList.add('taskDate')
-        taskDate.innerHTML = myTasks[i].dueDate;
-        newDiv.appendChild(taskDate)
+        const dateBox = document.createElement('div')
+        dateBox.classList.add('dateBox')
 
-        const taskPriority = document.createElement('div');
-        taskPriority.classList.add('taskPriority')
-        taskPriority.innerHTML = myTasks[i].priority;
-        newDiv.appendChild(taskPriority)
+            const dateHeader = document.createElement('div')
+            dateHeader.classList.add('box-header')
+            dateHeader.innerHTML = 'Due:'
+            dateBox.appendChild(dateHeader)
 
+            const taskDate = document.createElement('div');
+            taskDate.classList.add('taskDate')
+            taskDate.innerHTML = myTasks[i].dueDate;
+            dateBox.appendChild(taskDate)
 
+        newDiv.appendChild(dateBox)
+
+        const priorityBox = document.createElement('div')
+        priorityBox.classList.add('priorityBox')
+
+            const priorityHeader = document.createElement('div')
+            priorityHeader.classList.add('box-header')
+            priorityHeader.innerHTML = 'Priority:'
+            priorityBox.appendChild(priorityHeader)  
+            
+            const taskPriority = document.createElement('div');
+            taskPriority.classList.add('taskPriority')
+            taskPriority.innerHTML = myTasks[i].priority;
+            priorityBox.appendChild(taskPriority)
+
+        newDiv.appendChild(priorityBox)
         container.appendChild(newDiv)
 
     }
