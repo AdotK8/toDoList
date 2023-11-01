@@ -47,45 +47,45 @@ function myCallBack () {
 
 function addInputForm() {
     const container = document.querySelector('#create-task');
-
     const form = document.createElement('form')
-    form.setAttribute('id', 'form')
 
-    form.addEventListener('submit', (e)=>{
-        e.preventDefault();
-        submitTask()
-    })
+        form.setAttribute('id', 'create-task-form')
 
-        const text = document.createElement('input');
-        text.type = 'text';
-        text.placeholder = "Enter your task";
-        text.setAttribute('required', '')
-        text.setAttribute('id', 'input1')
+            form.addEventListener('submit', (e)=>{
+                e.preventDefault();
+                submitTask()
+            })
 
-        const date = document.createElement('input');
-        date.type = 'date';
-        date.setAttribute('required', '')
-        date.setAttribute('id', 'input2')
+                const text = document.createElement('input');
+                text.type = 'text';
+                text.placeholder = "  Enter your task";
+                text.setAttribute('required', '')
+                text.setAttribute('id', 'input1')
 
-        const priority = document.createElement('select');
-        priority.setAttribute('id', 'input3')
-            var newOption1 = document.createElement("option");
-            newOption1.text = 'High';
-            newOption1.value = 'High';
-                var newOption2 = document.createElement("option");
-                newOption2.text = 'Medium';
-                newOption2.value = 'Medium';
-                    var newOption3 = document.createElement("option");
-                    newOption3.text = 'Low';
-                    newOption3.value = 'Low';
+                    const date = document.createElement('input');
+                    date.type = 'date';
+                    date.setAttribute('required', '')
+                    date.setAttribute('id', 'input2')
 
-                        priority.appendChild(newOption1);
-                        priority.appendChild(newOption2);
-                        priority.appendChild(newOption3);
+                        const priority = document.createElement('select');
+                        priority.setAttribute('id', 'input3')
+                            var newOption1 = document.createElement("option");
+                            newOption1.text = 'High';
+                            newOption1.value = 'High';
+                                var newOption2 = document.createElement("option");
+                                newOption2.text = 'Medium';
+                                newOption2.value = 'Medium';
+                                    var newOption3 = document.createElement("option");
+                                    newOption3.text = 'Low';
+                                    newOption3.value = 'Low';
 
-            const btn = document.createElement('button')
-            btn.innerHTML = "Create Task"
-            btn.type = 'submit';
+                                        priority.appendChild(newOption1);
+                                        priority.appendChild(newOption2);
+                                        priority.appendChild(newOption3);
+
+                                                const btn = document.createElement('button')
+                                                btn.innerHTML = "Create Task"
+                                                btn.type = 'submit';
           
 
         form.appendChild(text);
@@ -102,14 +102,12 @@ function submitTask(){
     const input2 = document.getElementById("input2");
     const input3 = document.getElementById("input3");
 
-    console.log(myTasks)
+        const newTask = new task(input1.value, input2.value, input3.value, "No Project");
+        myTasks.push(newTask)
 
-    const newTask = new task(input1.value, input2.value, input3.value, "No Project");
-    myTasks.push(newTask)
-    console.log(myTasks)
-
-    allTasksDisplay(myTasks)
-    addTask()
+            allTasksDisplay(myTasks)
+                
+                addTask()
 }
 
 export default addTask

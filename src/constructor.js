@@ -7,5 +7,4 @@ class task {
         this.project=project
     }
 }
-
 export default task
