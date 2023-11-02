@@ -2,9 +2,27 @@
 
 import { myProjects } from ".";
 
-const container = document.querySelector('#create-task-btn');
+const container = document.querySelector('.bottom-nav');
+
 
 function createProject () {
+
+    const projectItem = document.createElement('div')
+    projectItem.classList.add('nav-item')
+
+        const addTaskButton = document.createElement('div')
+        addTaskButton.classList.add('nav-item')
+        addTaskButton.setAttribute('id', 'create-project-btn')
+        addTaskButton.innerHTML = 'Create Project'
+
+            const plus = document.createElement('img')
+            plus.setAttribute('id', 'icon')
+            plus.setAttribute('src', '../src/images/plus.svg')
+
+            projectItem.appendChild(plus)    
+            projectItem.appendChild(addTaskButton)
+
+                container.appendChild(projectItem)
 
     container.addEventListener('click', myCallBack)
     
@@ -44,10 +62,11 @@ function addFields () {
 
                             container.appendChild(form)
 
-
 }
 
 function storeInput(){
+    const input1 = document.getElementById('create-project-input')
+    myProjects.push(input1.value)
     console.log(myProjects)
 
 }

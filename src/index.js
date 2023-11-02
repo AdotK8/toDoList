@@ -6,7 +6,7 @@ import './styles/styles.css'
 
 //initializing empty arrays to store tasks and projects
 const myTasks = [];
-const myProjects = [];
+const myProjects = ["Ahmed", "Khan"];
 
 const task1 = new task("bla bla", "2012", "High", "No Project");
 const task2 = new task("fix something", "2010", "Low", "No Project");
@@ -15,8 +15,10 @@ const task4 = new task("wash up", "2022", "High", "Work" )
     myTasks.push(task1, task2, task3, task4)
 
 allTasksDisplay(myTasks);
+// displayProjectList();
 addTask();
 createProject();
+
 
 export default myTasks
 export {myProjects}
