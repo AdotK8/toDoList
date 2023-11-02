@@ -8,7 +8,7 @@ import './styles/styles.css'
 
 //initializing empty arrays to store tasks and projects
 const myTasks = [];
-const myProjects = ["Yase", "Programming"];
+const myProjects = ["Yase", "Work"];
 
 const task1 = new task("bla bla", "2012", "High", "No Project");
 const task2 = new task("fix something", "2010", "Low", "No Project");

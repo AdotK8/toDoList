@@ -1,4 +1,7 @@
+import myTasks from ".";
 import { myProjects } from ".";
+import displayProjectTasks from "./project-task-display";  
+
 
 const container = document.querySelector('.bottom-nav')
 
@@ -13,17 +16,20 @@ function displayProjectList(myProjects) {
             const newDiv = document.createElement('div')
             newDiv.classList.add('nav-item')
 
-                const icon = document.createElement('img')
-                icon.setAttribute('id', 'icon')
-                icon.setAttribute('src', '../src/images/folder-outline.svg')
+                newDiv.addEventListener('click', ()=>{
+                    displayProjectTasks(myTasks, myProjects[i])
+                })
+                    const icon = document.createElement('img')
+                    icon.setAttribute('id', 'icon')
+                    icon.setAttribute('src', '../src/images/folder-outline.svg')
 
-                    const projectName = document.createElement('div')
-                    projectName.innerHTML = myProjects[i]
+                        const projectName = document.createElement('div')
+                        projectName.innerHTML = myProjects[i]
 
-                        newDiv.appendChild(icon)
-                        newDiv.appendChild(projectName)
+                            newDiv.appendChild(icon)
+                            newDiv.appendChild(projectName)
 
-                            container.appendChild(newDiv)
+                                container.appendChild(newDiv)
         }
 }
 
