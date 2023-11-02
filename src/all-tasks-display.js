@@ -14,7 +14,7 @@ function allTasksDisplay(myTasks) {
       
         const checkbox = document.createElement('img')
         checkbox.classList.add('emptyCheck')
-        checkbox.setAttribute('src', '../src/images/check-circle-outline.svg')
+        checkbox.setAttribute('src', '../src/images/circle-outline.svg')
         newDiv.appendChild(checkbox);
 
         const taskDescription = document.createElement('div')

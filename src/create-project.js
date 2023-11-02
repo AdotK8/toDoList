@@ -1,6 +1,7 @@
 //logic to allow user to create and save new 'projects'
 
 import { myProjects } from ".";
+import displayProjectList from "./project-list-display";
 
 const container = document.querySelector('.bottom-nav');
 
@@ -30,11 +31,10 @@ function createProject () {
 }
 
 function myCallBack() {
-    while(container.firstChild) {
-        container.removeChild(container.lastChild)
-    }
-    addFields();
-    container.removeEventListener('click', myCallBack);
+    
+    container.removeChild(container.lastChild)
+        addFields();
+            container.removeEventListener('click', myCallBack);
 }
 
 function addFields () {
@@ -66,8 +66,10 @@ function addFields () {
 
 function storeInput(){
     const input1 = document.getElementById('create-project-input')
-    myProjects.push(input1.value)
-    console.log(myProjects)
+        myProjects.push(input1.value)
+            displayProjectList(myProjects)
+                createProject()
+            
 
 }
 
