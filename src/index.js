@@ -8,18 +8,23 @@ import './styles/styles.css'
 
 //initializing empty arrays to store tasks and projects
 const myTasks = [];
-const myProjects = ["Yase", "Work"];
+const myProjects = ["Yase", "TOP"];
 
-const task1 = new task("bla bla", "2012", "High", "No Project");
-const task2 = new task("fix something", "2010", "Low", "No Project");
-const task3 = new task("fuck you", "2022", "Medium", "Yase")
-const task4 = new task("wash up", "2022", "High", "Work" )
-    myTasks.push(task1, task2, task3, task4)
+const task1 = new task("Washing Up", "2012", "High", "No Project");
+const task2 = new task("New Calls", "2022", "Medium", "Yase")
+const task3 = new task("Coding Theory", "2022", "High", "TOP" )
+    myTasks.push(task1, task2, task3)
 
 allTasksDisplay(myTasks);
 displayProjectList(myProjects);
 addTask();
 createProject();
+
+const allTasksBtn = document.getElementById('all-tasks')
+allTasksBtn.addEventListener('click', ()=> {
+    allTasksDisplay(myTasks);
+    addTask();
+})
 
 
 export default myTasks

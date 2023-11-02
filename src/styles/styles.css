@@ -73,7 +73,7 @@ body {
 
 }
 
-.projects-nav {
+.projects-nav  {
     font-size: 30px;
     font-weight: 500;
     margin: 10px 0px 10px 0px;
@@ -98,11 +98,18 @@ body {
     padding: 5% 10%;
 }
 
+#display-title {
+    font-family: 'Roboto';
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
 .taskCard {  
     border-radius: 10px;
     background-size: cover;
     display: grid;
-    grid-template-columns: 50px 10fr 1fr 1fr;
+    grid-template-columns: 50px 10fr 2fr 1fr 1fr;
     gap: 1em;
     font-family: 'Roboto';
     margin: 1em 0px 1em 0px;
@@ -120,7 +127,6 @@ body {
     border-radius: 10px;
     background-size: cover;
     display: flex;
-    /* grid-template-columns: 50px 200px; */
     gap: 1em;
     font-family: 'Roboto';
     margin: 1em 0px 1em 0px;
@@ -132,7 +138,7 @@ body {
 
 #create-task-form {
     display: grid;
-    grid-template-columns: 8fr 2fr 1fr 1fr;
+    grid-template-columns: 8fr 2fr 1fr 1fr 1fr;
     gap: 1em;
 }
 
