@@ -10,10 +10,12 @@ function createProject () {
 
     const projectItem = document.createElement('div')
     projectItem.classList.add('nav-item')
+    projectItem.setAttribute('id', 'create-project-btn')
+    projectItem.addEventListener('click', myCallBack)
+   
 
         const addTaskButton = document.createElement('div')
         addTaskButton.classList.add('nav-item')
-        addTaskButton.setAttribute('id', 'create-project-btn')
         addTaskButton.innerHTML = 'Create Project'
 
             const plus = document.createElement('img')
@@ -25,7 +27,7 @@ function createProject () {
 
                 container.appendChild(projectItem)
 
-    container.addEventListener('click', myCallBack)
+               
     
 
 }
