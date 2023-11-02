@@ -12,36 +12,35 @@ function addTask () {
     const newDiv = document.createElement('div')
     newDiv.setAttribute('id', 'create-task')
 
-    const plus = document.createElement('img')
-    plus.classList.add('plus')
-    plus.setAttribute('src', '../src/images/plus.svg')
-    newDiv.appendChild(plus);
+        const plus = document.createElement('img')
+        plus.classList.add('plus')
+        plus.setAttribute('src', '../src/images/plus.svg')
+        newDiv.appendChild(plus);
         
-    container.appendChild(newDiv)
+            container.appendChild(newDiv)
 
-    const createTask = document.createElement('div')
-    createTask.classList.add('create-task-text')
-    createTask.innerHTML = 'Create Task';
-    newDiv.appendChild(createTask)
+                const createTask = document.createElement('div')
+                createTask.classList.add('create-task-text')
+                createTask.innerHTML = 'Create Task';
+                newDiv.appendChild(createTask)
 
     removeContent();
 }
 
 function removeContent (){
     const container = document.querySelector('#create-task');
-
-    container.addEventListener('click', myCallBack)
+        container.addEventListener('click', myCallBack)
 }
 
 function myCallBack () {
     const container = document.querySelector('#create-task');
 
-    while(container.firstChild) {
-        container.removeChild(container.lastChild)
-    }
+        while(container.firstChild) {
+            container.removeChild(container.lastChild)
+        }
 
-    container.removeEventListener('click', myCallBack);
-    addInputForm();
+            container.removeEventListener('click', myCallBack);
+                addInputForm();
 
 }
 
@@ -88,12 +87,12 @@ function addInputForm() {
                                                 btn.type = 'submit';
           
 
-        form.appendChild(text);
-        form.appendChild(date);
-        form.appendChild(priority);
-        form.appendChild(btn);
+                                                    form.appendChild(text);
+                                                    form.appendChild(date);
+                                                    form.appendChild(priority);
+                                                    form.appendChild(btn);
 
-    container.appendChild(form)
+                                                        container.appendChild(form)
 
 }
 

@@ -3,6 +3,7 @@ import allTasksDisplay from "./all-tasks-display";
 import addTask from "./add-task-button";
 import createProject from "./create-project";
 import displayProjectList from "./project-list-display";
+import displayProjectTasks from "./project-task-display";
 import './styles/styles.css'
 
 //initializing empty arrays to store tasks and projects

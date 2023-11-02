@@ -12,46 +12,45 @@ function allTasksDisplay(myTasks) {
         const newDiv = document.createElement('div')
         newDiv.classList.add('taskCard')
       
-        const checkbox = document.createElement('img')
-        checkbox.classList.add('emptyCheck')
-        checkbox.setAttribute('src', '../src/images/circle-outline.svg')
-        newDiv.appendChild(checkbox);
+            const checkbox = document.createElement('img')
+            checkbox.classList.add('emptyCheck')
+            checkbox.setAttribute('src', '../src/images/circle-outline.svg')
+            newDiv.appendChild(checkbox);
 
-        const taskDescription = document.createElement('div')
-        taskDescription.classList.add('taskDescription')
-        taskDescription.innerHTML = myTasks[i].description;
-        newDiv.appendChild(taskDescription)
+                const taskDescription = document.createElement('div')
+                taskDescription.classList.add('taskDescription')
+                taskDescription.innerHTML = myTasks[i].description;
+                newDiv.appendChild(taskDescription)
 
-        const dateBox = document.createElement('div')
-        dateBox.classList.add('dateBox')
+                    const dateBox = document.createElement('div')
+                    dateBox.classList.add('dateBox')
 
-            const dateHeader = document.createElement('div')
-            dateHeader.classList.add('box-header')
-            dateHeader.innerHTML = 'Due:'
-            dateBox.appendChild(dateHeader)
+                        const dateHeader = document.createElement('div')
+                        dateHeader.classList.add('box-header')
+                        dateHeader.innerHTML = 'Due:'
+                        dateBox.appendChild(dateHeader)
 
-            const taskDate = document.createElement('div');
-            taskDate.classList.add('taskDate')
-            taskDate.innerHTML = myTasks[i].dueDate;
-            dateBox.appendChild(taskDate)
+                            const taskDate = document.createElement('div');
+                            taskDate.classList.add('taskDate')
+                            taskDate.innerHTML = myTasks[i].dueDate;
+                            dateBox.appendChild(taskDate)
+                            newDiv.appendChild(dateBox)
 
-        newDiv.appendChild(dateBox)
+                                const priorityBox = document.createElement('div')
+                                priorityBox.classList.add('priorityBox')
 
-        const priorityBox = document.createElement('div')
-        priorityBox.classList.add('priorityBox')
-
-            const priorityHeader = document.createElement('div')
-            priorityHeader.classList.add('box-header')
-            priorityHeader.innerHTML = 'Priority:'
-            priorityBox.appendChild(priorityHeader)  
+                                    const priorityHeader = document.createElement('div')
+                                    priorityHeader.classList.add('box-header')
+                                    priorityHeader.innerHTML = 'Priority:'
+                                    priorityBox.appendChild(priorityHeader)  
             
-            const taskPriority = document.createElement('div');
-            taskPriority.classList.add('taskPriority')
-            taskPriority.innerHTML = myTasks[i].priority;
-            priorityBox.appendChild(taskPriority)
-
-        newDiv.appendChild(priorityBox)
-        container.appendChild(newDiv)
+                                        const taskPriority = document.createElement('div');
+                                        taskPriority.classList.add('taskPriority')
+                                        taskPriority.innerHTML = myTasks[i].priority;
+                                        priorityBox.appendChild(taskPriority)
+                                        newDiv.appendChild(priorityBox)
+        
+                                            container.appendChild(newDiv)
 
     }
 
