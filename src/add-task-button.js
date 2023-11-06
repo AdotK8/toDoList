@@ -121,7 +121,7 @@ function submitTask(){
     const input4 = document.getElementById("input4")
 
 
-        const newTask = new task(input1.value, input2.value, input3.value, input4.value);
+        const newTask = new task(input1.value, input2.value, input3.value, input4.value, "incomplete");
         myTasks.push(newTask)
 
         const title = document.querySelector('#display-title')

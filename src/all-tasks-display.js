@@ -1,4 +1,5 @@
 //function which displays all the tasks in array 
+import addTask from "./add-task-button"
 
 function allTasksDisplay(myTasks) {
 
@@ -11,7 +12,7 @@ function allTasksDisplay(myTasks) {
 
    const titleBox = document.querySelector('.right')
    titleBox.removeChild(titleBox.firstChild)
-   const  title = document.createElement('div')
+   const title = document.createElement('div')
    title.innerHTML = 'All Tasks'
    title.setAttribute('id', 'display-title')
    titleBox.prepend(title)
@@ -21,8 +22,18 @@ function allTasksDisplay(myTasks) {
         newDiv.classList.add('taskCard')
       
             const checkbox = document.createElement('img')
-            checkbox.classList.add('emptyCheck')
             checkbox.setAttribute('src', '../src/images/circle-outline.svg')
+
+                if (myTasks[i].done === "incomplete") {
+                    checkbox.setAttribute('src', '../src/images/circle-outline.svg')
+                }  else if (myTasks[i].done === "complete") {
+                    checkbox.setAttribute('src', '../src/images/check-circle-outline.svg')
+                }
+                
+
+            checkbox.addEventListener('click', ()=>{
+                changeDoneStatus(i, myTasks)
+            })
             newDiv.appendChild(checkbox);
 
                 const taskDescription = document.createElement('div')
@@ -76,6 +87,24 @@ function allTasksDisplay(myTasks) {
 
     }
 
+}
+
+function changeDoneStatus (i, myTasks) {
+
+    switch (myTasks[i].done){
+        case("complete"):
+                myTasks[i].done = "incomplete";
+                console.log(myTasks[i])
+                    break;
+        case('incomplete'):
+     
+                myTasks[i].done = "complete";
+                console.log(myTasks[i])
+                     break;
+    }
+
+    allTasksDisplay(myTasks);
+    addTask()
 }
 
 export default allTasksDisplay 

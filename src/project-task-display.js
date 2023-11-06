@@ -88,8 +88,6 @@ function printProjectTasks(task) {
 
 }
 
-function newProjectTask() {
 
-}
 
 export default displayProjectTasks

@@ -113,6 +113,16 @@ body {
     text-align: center;
 }
 
+.emptyCheck {
+    background-image: url(../images/circle-outline.svg);
+    background-size: cover;
+}
+
+.check{
+    background-image: url(../images/circle-outline.svg);
+    background-size: cover;
+}
+
 .taskCard {  
     border-radius: 10px;
     background-size: cover;
