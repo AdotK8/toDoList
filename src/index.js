@@ -12,7 +12,7 @@ const myProjects = ["Yase", "TOP"];
 
 const task1 = new task("Washing Up", "2023-11-08", "High", "No Project", "incomplete");
 const task2 = new task("New Calls", "2023-11-08", "Medium", "Yase", 'complete')
-const task3 = new task("Coding Theory", "2023-11-08", "High", "TOP", "incomplete" )
+const task3 = new task("Coding Theory", "2023-11-08", "High", "Yase", "incomplete" )
     myTasks.push(task1, task2, task3)
 
 allTasksDisplay(myTasks);

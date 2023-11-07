@@ -1,6 +1,7 @@
 import myTasks from ".";
 import { myProjects } from ".";
 import displayProjectTasks from "./project-task-display";  
+import addTask from "./add-task-button";
 
 
 const container = document.querySelector('.bottom-nav')
@@ -18,6 +19,7 @@ function displayProjectList(myProjects) {
 
                 newDiv.addEventListener('click', ()=>{
                     displayProjectTasks(myTasks, myProjects[i])
+                    addTask()
                 })
                     const icon = document.createElement('img')
                     icon.setAttribute('id', 'icon')

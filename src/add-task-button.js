@@ -130,6 +130,7 @@ function submitTask(){
             addTask()
         } else {
             displayProjectTasks(myTasks, title.innerHTML)
+            addTask()
         }
 
 }
