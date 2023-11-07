@@ -1,5 +1,6 @@
 import myTasks, { myProjects } from ".";
 import addTask from "./add-task-button";
+import removeTask from "./remove-task";
 
 const container = document.querySelector('.container')
 
@@ -28,9 +29,8 @@ function displayProjectTasks (myTasks, currentProject) {
 
 function printProjectTasks(i) {
 
-    // while(container.firstChild){
-    //     container.removeChild(container.lastChild)
-    //     }
+
+    const title = document.getElementById('display-title')
 
         const newDiv = document.createElement('div')
         newDiv.classList.add('taskCard')
@@ -40,6 +40,7 @@ function printProjectTasks(i) {
  
             if (myTasks[i].done === "incomplete") {
                 checkbox.setAttribute('src', '../src/images/circle-outline.svg')
+                
             }  else if (myTasks[i].done === "complete") {
                 checkbox.setAttribute('src', '../src/images/check-circle-outline.svg')
             }
@@ -95,16 +96,26 @@ function printProjectTasks(i) {
                                                                     taskPriority.innerHTML = myTasks[i].priority;
                                                                     priorityBox.appendChild(taskPriority)
                                                                     newDiv.appendChild(priorityBox)
-                                    
-                                                                        container.appendChild(newDiv)
+
+                                                                        const bin = document.createElement('img')
+                                                                        bin.classList.add('bin')
+                                                                        bin.setAttribute('src', '../src/images/trash-can-outline.svg')
+                                                                        bin.setAttribute('id', 'binIcon')
+                                                                        bin.addEventListener('click', ()=> {
+                                                                            removeTask(i)
+                                                                            displayProjectTasks(myTasks, title.innerHTML)
+                                                                            addTask()
+            
+                                                                        })
+                                                                            newDiv.appendChild(bin)
+                                            
+                                                                                container.appendChild(newDiv)
                                              
 
 }
 
 function changeDoneStatus (i) {
-
     const title = document.getElementById('display-title')
-
     switch (myTasks[i].done){
         case("complete"):
             myTasks[i].done = "incomplete";

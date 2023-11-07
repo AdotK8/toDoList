@@ -1,5 +1,6 @@
 //function which displays all the tasks in array 
 import addTask from "./add-task-button"
+import removeTask from "./remove-task"
 
 function allTasksDisplay(myTasks) {
 
@@ -82,8 +83,19 @@ function allTasksDisplay(myTasks) {
                                                     taskPriority.innerHTML = myTasks[i].priority;
                                                     priorityBox.appendChild(taskPriority)
                                                     newDiv.appendChild(priorityBox)
-                    
-                                                        container.appendChild(newDiv)
+
+                                                        const bin = document.createElement('img')
+                                                        bin.classList.add('bin')
+                                                        bin.setAttribute('src', '../src/images/trash-can-outline.svg')
+                                                        bin.setAttribute('id', 'binIcon')
+                                                            bin.addEventListener('click', ()=> {
+                                                                removeTask(i)
+                                                                allTasksDisplay(myTasks);
+                                                                addTask()
+
+                                                            })
+                                                                newDiv.appendChild(bin)
+                                                                    container.appendChild(newDiv)
 
     }
 

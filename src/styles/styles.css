@@ -118,6 +118,9 @@ body {
     background-size: cover;
 }
 
+#blue {
+}
+
 .check{
     background-image: url(../images/circle-outline.svg);
     background-size: cover;
@@ -127,7 +130,7 @@ body {
     border-radius: 10px;
     background-size: cover;
     display: grid;
-    grid-template-columns: 50px 10fr 2fr 1fr 1fr;
+    grid-template-columns: 50px 10fr 2fr 1fr 1fr 1fr;
     gap: 1em;
     font-family: 'Roboto';
     margin: 1em 0px 1em 0px;
@@ -179,6 +182,14 @@ body {
     width: 50px;
 
 }
+
+#binIcon {
+
+    height:35px;
+    width: 35px;
+}
+
+
 
 
 
