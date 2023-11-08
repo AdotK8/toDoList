@@ -31,6 +31,8 @@ body {
     display: flex;
     align-items: end;
     padding: 1rem;
+    box-shadow: 0 0 10px var(--darker-tone);
+    z-index: 1;
 }
 
 #logo {
@@ -68,8 +70,29 @@ body {
     padding: 5px;
 }
 
+#binIconTask {
+    height:30px;
+    width: 30px;
+    justify-self: flex-end;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+#binIconTask:hover{
+    height:35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.project-name:hover {
+    font-size: larger;
+    cursor: pointer;
+}
+
+
 .nav-item:hover {
     background-color: var(--hover-colour);
+
 }
 
 .nav{
@@ -113,19 +136,6 @@ body {
     text-align: center;
 }
 
-.emptyCheck {
-    background-image: url(../images/circle-outline.svg);
-    background-size: cover;
-}
-
-#blue {
-}
-
-.check{
-    background-image: url(../images/circle-outline.svg);
-    background-size: cover;
-}
-
 .taskCard {  
     border-radius: 10px;
     background-size: cover;
@@ -157,6 +167,19 @@ body {
     height: 70px; 
 }
 
+#check, .plus {
+    width: 50px;
+    height: 50px;
+    justify-self: center;
+}
+
+#check:hover, .plus:hover {
+    width: 60px;
+    height: 60px;
+    justify-self: center;
+    cursor: pointer;
+}
+
 #create-task-form {
     display: grid;
     grid-template-columns: 8fr 2fr 1fr 1fr 1fr;
@@ -176,7 +199,7 @@ body {
     font-weight: 600;
 }
 
-.emptyCheck, .plus {
+.plus {
 
     height: 50px;
     width: 50px;
@@ -184,13 +207,19 @@ body {
 }
 
 #binIcon {
-
     height:35px;
     width: 35px;
 }
 
+#binIcon:hover {
+    height:40px;
+    width: 40px;
+    cursor: pointer;
+}
 
-
+.complete {
+    background-color:rgba(180, 255, 180, 0.747);
+}
 
 
 /* styling for the bottom section */
@@ -200,6 +229,7 @@ body {
     background-color: var(--darker-tone);
     justify-content: center;
     align-items: center;
+    box-shadow:  0 0 10px var(--darker-tone);
 }
 
 .sig {

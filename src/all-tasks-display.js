@@ -24,16 +24,21 @@ function allTasksDisplay(myTasks) {
       
             const checkbox = document.createElement('img')
             checkbox.setAttribute('src', '../src/images/circle-outline.svg')
+            checkbox.setAttribute('id', 'check' )
+        
 
                 if (myTasks[i].done === "incomplete") {
                     checkbox.setAttribute('src', '../src/images/circle-outline.svg')
+                    newDiv.classList.add('incomplete')
                 }  else if (myTasks[i].done === "complete") {
                     checkbox.setAttribute('src', '../src/images/check-circle-outline.svg')
+                    newDiv.classList.add('complete')
                 }
                 
 
             checkbox.addEventListener('click', ()=>{
                 changeDoneStatus(i, myTasks)
+
             })
             newDiv.appendChild(checkbox);
 

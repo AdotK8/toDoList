@@ -40,9 +40,11 @@ function printProjectTasks(i) {
  
             if (myTasks[i].done === "incomplete") {
                 checkbox.setAttribute('src', '../src/images/circle-outline.svg')
+                newDiv.classList.add('incomplete')
                 
             }  else if (myTasks[i].done === "complete") {
                 checkbox.setAttribute('src', '../src/images/check-circle-outline.svg')
+                newDiv.classList.add('complete')
             }
                     checkbox.addEventListener('click', ()=> {
                         changeDoneStatus(i)
