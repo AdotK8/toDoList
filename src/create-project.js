@@ -2,78 +2,66 @@
 
 import { myProjects } from ".";
 import displayProjectList from "./project-list-display";
+import plusImg from "./images/plus.svg";
 
-const container = document.querySelector('.bottom-nav');
+const container = document.querySelector(".bottom-nav");
 
+function createProject() {
+  const projectItem = document.createElement("div");
+  projectItem.classList.add("nav-item");
+  projectItem.setAttribute("id", "create-project-btn");
+  projectItem.addEventListener("click", myCallBack);
 
-function createProject () {
+  const addTaskButton = document.createElement("div");
+  addTaskButton.classList.add("nav-item");
+  addTaskButton.innerHTML = "Create Project";
 
-    const projectItem = document.createElement('div')
-    projectItem.classList.add('nav-item')
-    projectItem.setAttribute('id', 'create-project-btn')
-    projectItem.addEventListener('click', myCallBack)
-   
+  const plus = document.createElement("img");
+  plus.setAttribute("id", "icon");
+  plus.setAttribute("src", plusImg);
 
-        const addTaskButton = document.createElement('div')
-        addTaskButton.classList.add('nav-item')
-        addTaskButton.innerHTML = 'Create Project'
+  projectItem.appendChild(plus);
+  projectItem.appendChild(addTaskButton);
 
-            const plus = document.createElement('img')
-            plus.setAttribute('id', 'icon')
-            plus.setAttribute('src', '../src/images/plus.svg')
-
-            projectItem.appendChild(plus)    
-            projectItem.appendChild(addTaskButton)
-
-                container.appendChild(projectItem)
-
-               
-    
-
+  container.appendChild(projectItem);
 }
 
 function myCallBack() {
-    
-    container.removeChild(container.lastChild)
-        addFields();
-            container.removeEventListener('click', myCallBack);
+  container.removeChild(container.lastChild);
+  addFields();
+  container.removeEventListener("click", myCallBack);
 }
 
-function addFields () {
-    
-    const form = document.createElement('form')
-    form.setAttribute('id', 'create-project-form')
+function addFields() {
+  const form = document.createElement("form");
+  form.setAttribute("id", "create-project-form");
 
-        form.addEventListener('submit', (e)=>{
-            e.preventDefault();
-            storeInput()
-        })
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    storeInput();
+  });
 
-                const text = document.createElement('input')
-                text.type = 'text';
-                text.placeholder = " Project Name";
-                text.setAttribute('required', '')
-                text.setAttribute('id', 'create-project-input')
+  const text = document.createElement("input");
+  text.type = "text";
+  text.placeholder = " Project Name";
+  text.setAttribute("required", "");
+  text.setAttribute("id", "create-project-input");
 
-                    const btn = document.createElement('button')
-                    btn.innerHTML = "Add Project"
-                    btn.type = 'submit'
+  const btn = document.createElement("button");
+  btn.innerHTML = "Add Project";
+  btn.type = "submit";
 
-                        form.appendChild(text)
-                        form.appendChild(btn)
+  form.appendChild(text);
+  form.appendChild(btn);
 
-                            container.appendChild(form)
-
+  container.appendChild(form);
 }
 
-function storeInput(){
-    const input1 = document.getElementById('create-project-input')
-        myProjects.push(input1.value)
-            displayProjectList(myProjects)
-                createProject()
-            
-
+function storeInput() {
+  const input1 = document.getElementById("create-project-input");
+  myProjects.push(input1.value);
+  displayProjectList(myProjects);
+  createProject();
 }
 
-export default createProject
-
+export default createProject;
